@@ -1,0 +1,33 @@
+table{
+  border-collapse: collapse;
+  border-color: peru;
+}
+.itemId{
+  width: 50px;
+}
+.itemText{
+  width: 170px;
+  text-align: center;
+}
+.itemCompleted{
+  width: 170px;
+  text-align: center;
+}
+.completeAllTask{
+  margin-top: 30px;
+  background-color: bisque;
+}
+td{
+  font-family: Cambria;
+  height: 30px;
+  font-weight: bold;
+}
+.list tr.completed{
+  background-color:  moccasin;
+}
+.addTask{
+  background-color: bisque;
+}
+
+
+

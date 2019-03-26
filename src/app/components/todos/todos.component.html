@@ -1,0 +1,23 @@
+<h3>To add a task:</h3>
+<form (ngSubmit)="onSubmit(addTodoForm)" #addTodoForm="ngForm" novalidate>
+    <input type="text" [(ngModel)]="newTask.text" name="text" #todoText="ngModel" rows="2" required>
+  <button class="addTask" type="submit" [disabled]="addTodoForm.invalid">Add Task</button>
+</form>
+<ng-container *ngFor="let item of Tasks ">
+  <app-todo-item  [item]="item" (elementDeleted)="onOutputDelete($event)" (elementComplete)="onOutputComplete($event)" ></app-todo-item>
+<table border="1px" class="list">
+  <tr [ngClass]="{completed: item.completed}">
+    <td class="itemId">{{'Id : '+item.id}}</td>
+    <td class="itemText">{{'Text : '+item.text}}</td>
+    <td class="itemCompleted">{{'Completed : '+item.completed}}</td>
+  </tr>
+</table>
+</ng-container>
+<button  class="completeAllTask" (click)="completeAllTasks($event)">Complete All Tasks</button>
+
+
+
+
+
+
+
